@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Student Registration Form</title>
+        <style>
+            #h1
+            {
+                color: rgb(48, 15, 78);
+                background-color: brown;
+                width: fit-content;
+            }
+            #body{background-color: beige;}
+            #h2
+            {
+                color: cadetblue;
+                background-color: rgb(188, 210, 210);
+                width: fit-content;
+            }
+            #fname
+            {
+                color: blueviolet;
+            }
+            #f-inpu
+            {
+                background-color: burlywood;
+            }
+            #lname
+            {
+                color: blueviolet;
+            }
+            #l-inpu
+            {
+                background-color: burlywood;
+            }
+            #dob
+            {
+                color: blueviolet;
+            }
+            #dob1{
+                background-color: rgb(239, 152, 21);
+                border-style: dashed;
+            }
+            #gen
+            {
+                color: blueviolet;
+            }
+            #drop1
+            {
+                background-color: rgb(187, 221, 231);
+            }
+            #phone
+            {
+                background-color: burlywood;
+            }
+            #textarea
+            {
+                background-color: burlywood;
+            }
+            #textarea1
+            {
+                background-color: burlywood;
+            }
+
+            #but1
+            {
+                color: blue;
+                background-color: coral;
+            }
+            #but2
+            {
+                color: blue;
+                background-color: coral;
+            }
+            
+        </style>
+    </head>
+    <body id="body">
+        <form action="./from2.html">
+        <div>
+            <img src="./download.png" width="100" height="100" align="right">
+            <h1 id="h1"><u>Student Registration Form</u></h1>
+        <hr>
+        <h2 id="h2"><u>Enter Details</u>:</h2>
+        <b id="fname">First Name :</b> <input id="f-inpu" type="text" />
+        <br><br>
+        <b id="lname">Last Name :</b> <input id="l-inpu" type="text" />
+        <br><br>
+        <b id="dob">DOB :</b> <input id="dob1" type="date"  /> 
+        <br> <br>
+        <b id="gen">Gender :  </b>
+        Male <input type="radio" name="gender" />
+        Female  <input type="radio" name="gender"/>
+        </div>
+        <div>
+        <p>
+           <b style="color: blueviolet;"> City :</b>
+            <select  id="drop1">
+                <option value="">Pune</option>
+                <option value="">Karad</option>
+                <option value="">Mumbai</option>
+                <option value="">Goa</option>
+                <option value="">Chatrapati Sambhaji maharaj</option>
+                <option value="">Nashik</option>
+                <option value="">Delhi</option>
+            </select>
+            <br><br>
+            <b style="color: blueviolet;">Phone: &nbsp;</b>
+            <input type="tel" name="" id="phone"/>
+            <br><br>
+            <b style="color: blueviolet;">Address: </b>
+            <textarea name="" id="textarea" cols="40" rows="5"></textarea>
+            <br><br>
+            <b style="color: blueviolet;">Education: &nbsp&nbsp</b>
+            SSC<input type="checkbox" />
+            &nbsp HSC<input type="checkbox" />
+            &nbsp UG<input type="checkbox" />
+            &nbsp PG<input type="checkbox" />
+            <br><br>
+            <b style="color: blueviolet;">Introduce Yourself:</b>
+            <textarea id="textarea1" cols="34" rows="10"></textarea>
+            <br><br><hr>
+            &nbsp&nbsp&nbsp;
+            <button id="but1">Clear</button>
+            <button id="but2">Submit</button>
+        </p>
+
+        </div>
+         </form>
+    </body>
+</html>

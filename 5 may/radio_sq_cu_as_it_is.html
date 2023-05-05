@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: aqua;
+                width: fit-content;
+                margin-left: 600px;
+                padding: 30px;
+                border-style: dashed;
+            }
+        </style>
+        <script>
+            function handler(str){
+                let num = parseInt(document.getElementById("i1").value)
+                let result
+
+                switch (str) {
+                    case "sq":
+                        result = num*num
+                        break;
+                    case "cu":
+                        result =num*num*num
+                        break;
+                    case "as":
+                        result = num
+                        break;
+                    default:
+                        result=0
+                        break;
+                }
+                document.getElementById("p1").innerText =`${result}`
+            }
+        </script>
+    </head>
+    <body>
+        <div  class="row">
+        <div id="d1" class="col">
+            <pre style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    Enter Num: <input type="number"  id="i1">
+    Square: <input onclick="handler('sq')" type="radio" name="math" id="r1" value="sq" /> 
+    Cube: <input onclick="handler('cu')" type="radio" name="math" id="r2" value="cu" /> 
+    As It Is: <input onclick="handler('as')" type="radio" name="math" id="r3" value="as" /> 
+    <p >{<span id="p1"></span>}</p>
+            </pre>
+        </div>
+        </div>
+    </body>
+</html>

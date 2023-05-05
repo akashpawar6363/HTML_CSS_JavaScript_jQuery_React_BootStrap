@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function f1()
+            {
+                let element  = document.getElementById("p1")
+                element.innerText = document.getElementById("i1").value.toLowerCase()
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" value="" placeholder="text" id="i1"/>
+        <p id="p1"></p>
+        <button onClick="f1()">Lowercase</button>
+    </body>
+</html>

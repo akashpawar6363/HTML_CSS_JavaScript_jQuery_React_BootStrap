@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+            function f1()
+            {
+                let n1 = document.getElementById("num1").value
+                let n2 = document.getElementById("num2").value
+
+                switch(document.getElementById("s1").value)
+                {
+                    case "+":
+                        let sum = parseInt(n1) + parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} + ${n2} = ${sum}`
+                        break;
+                    case "-":
+                        let sub = parseInt(n1) - parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} - ${n2} = ${sub}`
+                        break;
+                    case "*":
+                        let multi = parseInt(n1) * parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} * ${n2} = ${multi}`
+                        break;
+                    case "%":
+                        let div = parseInt(n1) % parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} % ${n2} = ${div}`
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <pre>
+            <input type="number" id="num1" value="0"/>
+            <br>
+            <input type="number" id="num2" value="0"/>
+
+            <select id="s1" onchange="f1()">
+                <option >select</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="%">%</option>
+            </select>
+        </pre>
+        <p id="p1"></p>
+
+    </body>
+</html>

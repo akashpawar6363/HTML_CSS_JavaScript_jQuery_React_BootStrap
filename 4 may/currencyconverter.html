@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <h1><b><u>Currency Converter</u></b></h1>
+        <script>
+            function f1()
+            {
+                let num = document.getElementById("i1").value
+                let element = document.getElementById("p1")
+                let str1 = document.getElementById("s1").value
+                let str2 = document.getElementById("s2").value
+
+                switch(str1){
+                    case "Dollar":
+                        if(str2=="Dollar"){
+                            element.innerHTML = num.concat("&#36","  = ",num,"&#36")
+                        }
+                        else if(str2=="Rupees"){
+                            element.innerHTML = num.concat("&#36","  = ",num*80,"&#8377")
+                        }
+                        else if(str2=="Euro"){
+                            element.innerHTML = num.concat("&#36","  = ",num*(80/90),"&#8364")
+                        }
+                        break;
+                    case "Rupees":
+                        if(str2=="Rupees"){
+                            element.innerHTML=num.concat("$#8377","  = ",num,"&#8377")
+                        }
+                        else if(str2=="Dollar"){
+                            element.innerHTML=num.concat("$#8377","  = ",num/80,"&#36")
+                        }
+                        else if(str2=="Euro"){
+                            element.innerHTML = num.concat("&#8377","  = ",num/90,"&#8364")
+                        }
+                        break;
+                    case "Euro":
+                        if(str2=="Euro"){
+                            element.innerHTML  = num.concat("&#8364","  = ",num,"&#8364")
+                        }
+                        else if(str2=="Rupees"){
+                            element.innerHTML = num.concat("&#8364","  = ",num*90,"&#8377")
+                        }
+                        else if(str2=="Dollar"){
+                            element.innerHTML = num.concat("&#8364","  = ",num*(90/80),"&#36")
+                        }
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" placeholder="Enter a number" id="i1">
+            <br><br>
+            <select  id="s1">
+                <option>select</option>
+                <option>Dollar</option>
+                <option>Rupees</option>
+                <option>Euro</option>
+            </select>
+            <select  id="s2">
+                <option>select</option>
+                <option>Dollar</option>
+                <option>Rupees</option>
+                <option>Euro</option>
+            </select>
+            <br><br>
+            <button onclick="f1()">Convert</button>
+            <br>
+            <p><b id="p1"></b></p>
+        </div>
+    </body>
+</html>

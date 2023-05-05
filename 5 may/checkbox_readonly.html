@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            pre{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:blue
+            }
+        </style>
+        <script>
+            function handler()
+            {
+                let cb=document.getElementById("c1")
+                if(c1.checked){
+                    document.getElementById("i1").readOnly=true
+                }
+                else{
+                    document.getElementById("i1").readOnly=false
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <pre>
+        Text:   <input type="text" id="i1" />
+        <label for="c1">Click to make text feild readonly: </label><input type="checkbox"  id="c1" onchange="handler()"/>
+        </pre>
+    </body>
+</html>
