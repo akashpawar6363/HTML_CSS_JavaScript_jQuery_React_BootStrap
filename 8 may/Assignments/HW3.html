@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            let arr = []
+            function f1()
+            {
+                arr.push(document.getElementById("i1").value)
+                for(x in arr)
+                {
+                    console.log(arr)
+                }
+                document.getElementById("p1").innerText = arr
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label for="i1">Enter Something:</label><input type="text" id="i1" />
+            <input type="button" value="OK" onclick="f1()" />
+            <p id="p1"></p>
+        </div>
+    </body>
+</html>
