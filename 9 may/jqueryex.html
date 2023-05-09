@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#b1").click(function(){
+                    $("#p1").text("button Click")
+                })
+
+                $("#b2").click(function(){
+                    $("#p1").text("")
+                })
+
+                $("#t1").change(function(){
+                    let s = $(this).val()
+                    $("#p1").html("<i>"+s+"</i>")
+                })
+
+            })
+
+        </script>
+    </head>
+    <body>
+        <input type="button" id="b1" value="OK">
+        <input type="button" id="b2" value="CLEAR">
+        <input type="text" id="t1">
+        <br>
+        <p id="p1"></p>
+
+    </body>
+</html>
