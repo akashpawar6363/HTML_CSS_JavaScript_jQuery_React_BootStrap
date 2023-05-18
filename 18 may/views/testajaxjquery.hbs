@@ -11,7 +11,24 @@
                     $("#p2").html(`<h3>Sender: ${responsedata.sender}</h3>`)
                 })
             })
-            
+            $("#b2").click(()=>{
+                let n = $("num").val()
+                let obj = {num:n}
+                $.ajax({
+                    url: 'square',
+                    type: 'POST',
+                    data: JSON.stringify(obj),
+                    success: function(respdata)
+                    {
+                        $("#p1").html(`<h3>${respdata:sqr}</h3>`)
+                    },
+                    b   eforeSend: function(request){
+                        request.setRequestHeader("Content-type", "application/json");
+                    }
+                })
+
+            })
+
         })
 
     </script>
@@ -20,6 +37,9 @@
         <button type="button" class="btn btn-success" id="b1">GETTEXT</button>
         <p id="p1"></p>
         <p id="p2"></p>
+        <br><br>
+        <input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="num"/>
+        <button type="button" class="btn btn-outline-primary" id="b2">PostObject</button>
         
     </body>
 </html>
