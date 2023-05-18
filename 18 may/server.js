@@ -7,7 +7,8 @@ app.set('view engine', 'hbs');
 app.use(json());
 
 app.get("/ajax", (req, res)=>{
-    res.render("textajax");
+    // res.render("textajax");
+    res.render("testajaxjquery");
 })
 
 app.get("/message", (req,res) => {
